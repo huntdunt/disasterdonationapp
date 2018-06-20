@@ -69,5 +69,9 @@ run_program <- function(x){
   # for (disaster in disasters){}
   get_money('PrayForThisProject')
 }
+ 
 
-print(run_program())
+while (TRUE){
+  run_program()
+  Sys.sleep(3600)
+}
