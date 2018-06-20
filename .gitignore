@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+.httr-oauth
+twitter-authentication.txt
+thoughtscopy.R
