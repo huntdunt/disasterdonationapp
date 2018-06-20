@@ -43,7 +43,6 @@ notify_admin <-  function(disaster){
     text_body(text) -> text_msg
   send_message(text_msg)
 }
-# notify_admin <-  function(disaster){}
 
 # Function that takes in input from administrator and then notifies users to make a donation
  get_money <- function(disaster){
