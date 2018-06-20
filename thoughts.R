@@ -46,7 +46,15 @@ notify_admin <-  function(disaster){
 # notify_admin <-  function(disaster){}
 
 # Function that takes in input from administrator and then notifies users to make a donation
-# get_money <- function(disaster){}
+ get_money <- function(disaster){
+   text = readline('Enter email body: ')
+   mime() %>%
+     to("disasterdonationappp@gmail.com") %>%
+     from("disasterdonationappp@gmail.com") %>%
+     subject(paste0('Please donate to: ', disaster)) %>%
+     text_body(text) -> text_msg
+   send_message(text_msg)
+ }
 
 # Function to run the program
 run_program <- function(x){
@@ -60,7 +68,7 @@ run_program <- function(x){
   #for (disaster in disasters){}
   notify_admin('#PrayForThisProject')
   # for (disaster in disasters){}
-  #get_money('PrayForThisProject')
+  get_money('PrayForThisProject')
 }
 
 print(run_program())
