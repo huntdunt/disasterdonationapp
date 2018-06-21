@@ -148,17 +148,18 @@ run_program <- function(x){
   top_tweets    <- pull_top_tweets(trending_tags)
   disasters     <- detect_disaster(top_tweets)
   if (!is.null(disasters)){
+      disasters <- trendings_tags[disasters]
       for (disaster in disasters){
           notify_admin('#PrayForThisProject')
-      }}
-  if (!is.null(disasters)){
+      }
       for (disaster in disasters){
           get_money('PrayForThisProject')
   }}
-}
+
  
 # Running the program
 while (TRUE){
   run_program()
   Sys.sleep(3600)
 }
+
